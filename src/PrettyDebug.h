@@ -231,7 +231,7 @@
     #if !defined(ENABLE_VERBOSE)
         #define VERBOSE(x)
     #else
-        #define VERBOSE(x)  {x}
+        #define VERBOSE(x)  x
     #endif /* ENABLE_VERBOSE */
 
 #endif /* TINY_DEBUG_H */
