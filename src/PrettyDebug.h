@@ -134,13 +134,13 @@
 
         #define DEBUG_VALUE(TYPE, VAR)  PLACE(\
 		        							DEBUG_PRINT_HEADER(COLOR_MAGENTA, VALUE);\
-                                          	DEBUG(#VAR " = ");\
+                                          	DEBUG(#VAR " == ");\
                                           	DEBUG_LN(TYPE, VAR);\
                                         )
 
         #define DEBUG_DIVIDER(STR, LENGTH)          print_divider(STR, LENGTH)
 
-        #define DEBUG_TRACE()           DEBUG(COLOR_YELLOW " + [TRACE] \t: Function : %s() :: Line : %d" DEFAULT_TEXT_COLOR NEWLINE, __func__, __LINE__)
+        #define DEBUG_TRACE()           DEBUG(COLOR_YELLOW " + [TRACE] \t: File : %s :: Function : %s() :: Line : %d" DEFAULT_TEXT_COLOR NEWLINE, __FILENAME__, __func__, __LINE__)
 
         #define THROW_EXCEPTION(...)    PLACE(\
         									DEBUG_PRINT_HEADER(COLOR_GREEN, EXCEPTION);     \
