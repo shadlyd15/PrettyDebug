@@ -13,76 +13,76 @@ It is designed especially for **embedded systems** keeping in mind the limitatio
 
 - **Attach Debug Stream :**
 ```C
-		ATTACH_DEBUG_STREAM(&Serial);
+	ATTACH_DEBUG_STREAM(&Serial);
 ```	
 
 - **Print Green OK Message :**
 ```C
-		DEBUG_OK("An Example OK Message From %s, "PrettyDebug");
+	DEBUG_OK("An Example OK Message From %s, "PrettyDebug");
 ```
 
 - **Print Red ERROR Message :**
 ```C
-		DEBUG_ERROR("An Example ERROR Message From %s, "PrettyDebug");
+	DEBUG_ERROR("An Example ERROR Message From %s, "PrettyDebug");
 ```
 
 - **Print Red ERROR Message :**
 ```C
-		DEBUG_ERROR("An Example ERROR Message From %s, "PrettyDebug");
+	DEBUG_ERROR("An Example ERROR Message From %s, "PrettyDebug");
 ```
 
 - **Print Cyan ALERT Message :**
 ```C
-		DEBUG_ALERT("An Example ALERT Message From %s, "PrettyDebug");
+	DEBUG_ALERT("An Example ALERT Message From %s, "PrettyDebug");
 ```
 
 - **Print Yellow WARNING Message :**
 ```C
-		DEBUG_WARNING("An Example WARNING Message From %s, "PrettyDebug");
+	DEBUG_WARNING("An Example WARNING Message From %s, "PrettyDebug");
 ```
 
 - **Print Variable with Variable Name :**
 ```C
-		DEBUG_VALUE("%d", Sample_Value);
+	DEBUG_VARIABLE("%d", Sample_Value);
 ```	
 
 - **Print Array with Name :**
 ```C
-		DEBUG_ARRAY(Sample_Array, 16, "%02X");
+	DEBUG_ARRAY(Sample_Array, 16, "%02X");
 ```	
 
 **Print Current Location in Code :**
 ```C
-		DEBUG_TRACE();
+	DEBUG_TRACE();
 ```	
 
 ## Arduino Example 
 
 ``` C
-		#include "PrettyDebug.h"
+	#include "PrettyDebug.h"
 
-		int Sample_Variable = 123;
-		int Sample_Array[] = {1, 2, 3, 4, 5};
+	int Sample_Variable = 123;
+	int Sample_Array[] = {1, 2, 3, 4, 5};
 
-		void setup(){
-		    Serial.begin(115200);
-		    ATTACH_DEBUG_STREAM(&Serial);
+	void setup(){
+	    Serial.begin(115200);
+	    ATTACH_DEBUG_STREAM(&Serial);
 
-		    DEBUG_OK("Pretty Debug Example Sketch");
-		    DEBUG_TRACE();
+	    DEBUG_OK("Pretty Debug Example Sketch");
+	    DEBUG_TRACE();
 
-		    DEBUG_OK("An Example OK Message From %s, "PrettyDebug");
-		    DEBUG_ERROR("An Example ERROR Message From %s, "PrettyDebug");
-		    DEBUG_ERROR("An Example ERROR Message From %s, "PrettyDebug");
-		    DEBUG_ALERT("An Example ALERT Message From %s, "PrettyDebug");
-		    DEBUG_WARNING("An Example WARNING Message From %s, "PrettyDebug");
-		    DEBUG_VALUE(Sample_Value, "%d");
-		    DEBUG_ARRAY(Sample_Array, 16, "%02X");
-		}
+	    DEBUG_OK("An Example OK Message From %s, "PrettyDebug");
+	    DEBUG_ERROR("An Example ERROR Message From %s, "PrettyDebug");
+	    DEBUG_ERROR("An Example ERROR Message From %s, "PrettyDebug");
+	    DEBUG_ALERT("An Example ALERT Message From %s, "PrettyDebug");
+	    DEBUG_WARNING("An Example WARNING Message From %s, "PrettyDebug");
+	    DEBUG_VALUE(Sample_Value, "%d");
+	    DEBUG_ARRAY(Sample_Array, 16, "%02X");
+	}
 
-		void loop(){
+	void loop(){
 
-		}
+	}
  ```
 
 ## Sample Output
