@@ -134,7 +134,7 @@
                                         		            DEBUG(" };" NEWLINE);\
                                         		        )
 
-        #define DEBUG_VALUE(TYPE, VAR)  PLACE(\
+        #define DEBUG_VARIABLE(VAR, TYPE)  PLACE(\
 		        							DEBUG_PRINT_HEADER(COLOR_MAGENTA, VALUE);\
                                           	DEBUG(#VAR " == ");\
                                           	DEBUG_LN(TYPE, VAR);\
@@ -224,7 +224,7 @@
         #define DEBUG_WARNING(...)
         #define DEBUG_INPUT(CB, MSG, LOOP)
         #define DEBUG_ARRAY(TARGET, LENGTH, FORMAT)
-        #define DEBUG_VALUE(TYPE, VAR)
+        #define DEBUG_VARIABLE(TYPE, VAR)
         #define DEBUG_DIVIDER(STR, LENGTH)
         #define DEBUG_TRACE()
         #define THROW_EXCEPTION(...)

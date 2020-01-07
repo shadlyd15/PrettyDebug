@@ -1,25 +1,22 @@
 #include "PrettyDebug.h"
 
 void setup(){
+    Serial.begin(115200);
+    ATTACH_DEBUG_STREAM(&Serial);
 
-  DEBUG_DIVIDER("*", 50);
-  DEBUG_OK("Pretty Debug Example Sketch");
-  DEBUG_TRACE();
-  DEBUG_DIVIDER("*", 50);
-  
-  DEBUG_OK("%d : A Sample OK Message", 1);
-  DEBUG_ERROR("%d : A Sample ERROR Message", 2);
-  DEBUG_ALERT("%d : A Sample ALERT Message", 3);
-  DEBUG_WARNING("%d : A Sample WARNING Message", 4);
-  
-  int Sample_Value = 666;
-  DEBUG_VALUE("%d", Sample_Value);
+    DEBUG_OK("Pretty Debug Example Sketch");
+    DEBUG_TRACE();
 
-  int Sample_Array[] = {1, 2, 3, 4, 5};
-  DEBUG_ARRAY(Sample_Array, sizeof(Sample_Array)/sizeof(Sample_Array[0]), "%02X");
-
-  DEBUG_DIVIDER("*", 50);
-  
+    DEBUG_OK("An Example OK Message From %s", "PrettyDebug");
+    DEBUG_ERROR("An Example ERROR Message From %s", "PrettyDebug");
+    DEBUG_ALERT("An Example ALERT Message From %s", "PrettyDebug");
+    DEBUG_WARNING("An Example WARNING Message From %s", "PrettyDebug");
+    
+    int Sample_Variable = 123;
+    int Sample_Array[] = {1, 2, 3, 4, 5};
+    
+    DEBUG_VARIABLE(Sample_Variable, "%d");
+    DEBUG_ARRAY(Sample_Array, 16, "%02X");
 }
 
 void loop(){
