@@ -77,7 +77,7 @@ It is designed especially for **embedded systems** keeping in mind the limitatio
 	    DEBUG_ALERT("An Example ALERT Message From %s, "PrettyDebug");
 	    DEBUG_WARNING("An Example WARNING Message From %s, "PrettyDebug");
 	    DEBUG_VALUE(Sample_Value, "%d");
-	    DEBUG_ARRAY(Sample_Array, 16, "%02X");
+	    DEBUG_ARRAY(Sample_Array, 5, "%02X");
 	}
 
 	void loop(){
