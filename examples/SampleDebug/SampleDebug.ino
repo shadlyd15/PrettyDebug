@@ -16,7 +16,7 @@ void setup(){
     int Sample_Array[] = {1, 2, 3, 4, 5};
     
     DEBUG_VARIABLE(Sample_Variable, "%d");
-    DEBUG_ARRAY(Sample_Array, 16, "%02X");
+    DEBUG_ARRAY(Sample_Array, 5, "%02X");
 }
 
 void loop(){
